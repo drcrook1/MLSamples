@@ -13,9 +13,9 @@ module Core =
     //Sigmoid function
     //element wise division of a z matrix
     //1.0 ./ (1.0 + exp(-z));
-    let private sigmoid (z:float) =
+    let sigmoid (z:float) =
         1.0 / (1.0 + exp(-z))
-    let private sigmoidM (z : Matrix<float>) : Matrix<float> =
+    let sigmoidM (z : Matrix<float>) : Matrix<float> =
         z.Map (fun x -> sigmoid(x))
-    let private sigmoidV (z:Vector<float>) =
+    let sigmoidV (z:Vector<float>) =
         z.Map(fun x -> sigmoid(x))
